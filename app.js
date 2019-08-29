@@ -14,8 +14,26 @@
      return choices[randomNumber]
  }
  getComputerChoice();
- function game(userChoice){
 
+ function game(userChoice){
+const computerChoice = getComputerChoice();
+switch (userChoice + computerChoice) {
+    case "rs":
+    case "pr":
+    case "sp":
+    win();
+    break;
+    case "rp":
+    case "ps":
+    case "sr":
+    lose();
+    break;
+    case "rr":
+    case "pp":
+    case "ss":
+    draw();
+    break;
+}
  }
 
  function main(){
